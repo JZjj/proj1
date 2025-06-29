@@ -1,0 +1,21 @@
+scrape_configs:
+  - job_name: 'api'
+    metrics_path: /metrics
+    static_configs:
+      - targets: ['api:8008']
+
+  - job_name: 'consumer'
+    metrics_path: /metrics
+    static_configs:
+      - targets: ['consumer:8000']
+
+  - job_name: 'triton'
+    metrics_path: /metrics
+    static_configs:
+      - targets: ['triton:8002']
+
+  - job_name: 'kafka'
+    metrics_path: /metrics
+    static_configs:
+      - targets: ['kafka:9308']    # if Kafka exporter runs here
+
