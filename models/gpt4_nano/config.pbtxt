@@ -1,4 +1,4 @@
-name: "openai_gpt"
+name: "gpt4_nano"
 backend: "python"
 max_batch_size: 8
 
@@ -43,8 +43,11 @@ instance_group [
   }
 ]
 
-# Parameters for the Python backend
-parameters: {
-  key: "EXECUTION_ENV_PATH",
-  value: {string_value: "$$TRITON_MODEL_DIRECTORY/openai_env.tar.gz"}
+# Version policy
+version_policy: { all { }}
+
+# Dynamic batching configuration
+dynamic_batching {
+  preferred_batch_size: [ 4, 8 ]
+  max_queue_delay_microseconds: 100
 }

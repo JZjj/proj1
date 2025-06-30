@@ -1,4 +1,6 @@
 kafka-python
 requests
 prometheus-client
+tritonclient[http]
+numpy
 
