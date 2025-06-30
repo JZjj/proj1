@@ -3,12 +3,12 @@ import logging
 import os
 import sys
 import time
-from typing import Dict, Any
+from typing import Any, Dict
 
 import prometheus_client
 import requests
 from kafka import KafkaConsumer, KafkaProducer
-from prometheus_client import Summary, Counter, Histogram
+from prometheus_client import Counter, Histogram, Summary
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, handlers=[logging.StreamHandler(sys.stdout)])

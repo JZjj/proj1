@@ -6,8 +6,8 @@ import threading
 
 import prometheus_client
 from fastapi import FastAPI, HTTPException
-from kafka import KafkaProducer, KafkaConsumer
-from prometheus_client import Summary, Counter
+from kafka import KafkaConsumer, KafkaProducer
+from prometheus_client import Counter, Summary
 from pydantic import BaseModel
 
 logging.basicConfig(level=logging.INFO, handlers=[logging.StreamHandler(sys.stdout)])

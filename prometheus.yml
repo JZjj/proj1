@@ -18,4 +18,3 @@ scrape_configs:
     metrics_path: /metrics
     static_configs:
       - targets: ['kafka:9308']    # if Kafka exporter runs here
-

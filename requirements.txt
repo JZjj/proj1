@@ -6,3 +6,4 @@ kafka-python>=2.0.2
 prometheus-client>=0.16.0
 flake8
 black
+pre-commit
