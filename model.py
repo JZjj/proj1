@@ -6,7 +6,7 @@ def test_openai_triton():
     """Test OpenAI model through Triton"""
 
     # Triton inference endpoint
-    url = "http://localhost:8000/v2/models/openai_gpt/infer"
+    url = "http://localhost:8000/v2/models/gpt4_nano/infer"
 
     # Prepare request
     payload = {
@@ -37,7 +37,7 @@ def test_openai_triton():
         response.raise_for_status()
 
         result = response.json()
-        print("OpenAI model response:")
+        print("GPT-4.1 Nano model response:")
         print(json.dumps(result, indent=2))
 
         # Extract the actual response

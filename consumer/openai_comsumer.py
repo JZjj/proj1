@@ -31,7 +31,7 @@ class OpenAITritonService:
 
         # Make inference
         response = self.client.infer(
-            model_name="openai_gpt",
+            model_name="gpt4_nano",
             inputs=inputs,
             outputs=outputs
         )
