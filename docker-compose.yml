@@ -50,7 +50,7 @@ services:
       - "8001:8001"
       - "8002:8002"
     volumes:
-      - ./models:/models
+      - /Users/judyyy/proj1/models
     command: tritonserver --model-repository=/models --allow-http=true
 
   consumer:
