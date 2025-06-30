@@ -82,4 +82,3 @@ services:
 networks:
   backend:
     driver: bridge
-
